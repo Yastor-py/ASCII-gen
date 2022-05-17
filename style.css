@@ -3,11 +3,26 @@ html, body {
     padding: 0;
     background-color: #000;
     font-family: 'Courier';
-    color: #FFF;
+    color: rgb(224, 226, 118);
     font-size: 12pt;
     line-height: 10pt;
   }
   
   canvas {
     display: block;
+  }
+  #papa{
+    width: 1000px;
+    float: left;
+  }
+  #kontener{
+    float: left;
+  }
+  #kontener2{
+    float: left;
+  }
+  img{
+    max-width: 958px;
+    height: 1330px;
+
   }

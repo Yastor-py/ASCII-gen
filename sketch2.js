@@ -1,46 +1,47 @@
-const destiny = "  ..,:-i|=+%O#@░▒▓█";
+const destiny2 = ".sdadsfafsffsadfasda";
 
 
-let pies;
+let pies2;
 
 function preload(){
-    pies = loadImage("pies2.jpg");
+    pies2 = loadImage("code.jpg");
 
 }
 function setup(){
-    noCanvas();
+    createCanvas(1000,1000);
 
     background(0);
-    image(pies, 0, 0, width, height);
-    let w = width / pies.width;
-    let h = height / pies.height;
-    pies.loadPixels();
+    //image(pies2, 0, 0, width, height);
+    let w = width / pies2.width;
+    let h = height / pies2.height;
+    pies2.loadPixels();
 
-    for (let j = 0; j < pies.height; j++){
-        let row ='';
-        for (let i = 0 ; i < pies.width; i++){
+    for (let j = 0; j < pies2.height; j++){
+        let row2 ='';
+        for (let i = 0 ; i < pies2.width; i++){
         
-            const pixelIndex = (i + j * pies.width)*4;
-            const r = pies.pixels[pixelIndex + 0];
-            const g = pies.pixels[pixelIndex + 1];
-            const b = pies.pixels[pixelIndex + 2];
+            const pixelIndex = (i + j * pies2.width)*4;
+            const r = pies2.pixels[pixelIndex + 0];
+            const g = pies2.pixels[pixelIndex + 1];
+            const b = pies2.pixels[pixelIndex + 2];
             const avg = (r + g + b) / 3;
             noStroke();
             fill(r,g,b); //avg
-            square(i*w , j*h, w);
+            //square(i*w , j*h, w);
 
-            const len = destiny.length;
+            const len = destiny2.length;
             const charIndex = floor(map(avg, 0, 255,0,len));
-            row += destiny.charAt(charIndex);
+            //row2 += destiny2.charAt(charIndex);
             
 
-           // textSize(w);
-           // textAlign(CENTER, CENTER);
-           // text(destiny.charAt(charIndex), i * w+w*0.5, j * h + h * 0.5);
+            textSize(w);
+            
+            textAlign(CENTER, CENTER);
+            text(destiny2.charAt(charIndex), i * w+w*0.5, j * h + h * 0.5);
 
             
         }
-        createDiv(row);
+        createDiv(row2);
         //console.log(row);
     }
 }
